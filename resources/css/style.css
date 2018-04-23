@@ -204,3 +204,40 @@ hr{
 	left:5%;
 	display: inline-block;
 }
+
+
+/*slideshow*/
+
+.section-slideshow{
+	height: 600px;
+	margin-bottom: 50px;
+}
+
+.section-slideshow h3,h4 {
+	color: black;
+	font-weight: 400;
+	position: relative;
+	top:460px;
+	text-align: center;
+}
+.section-slideshow h4{
+	color: #645f5f;
+	text-align: center;
+}
+.ion-ios-arrow-thin-left, .ion-ios-arrow-thin-right{
+	font-size: 40px;
+	color: #df5826;
+}
+
+.ion-ios-arrow-thin-left
+{
+	position: relative;
+	top:460px;
+	left:8%;
+}
+
+.ion-ios-arrow-thin-right{
+	position: relative;
+	top:460px;
+	right:-88%;
+}
