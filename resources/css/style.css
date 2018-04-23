@@ -141,32 +141,33 @@ i{
 
 .section-pic-doc img{
 	display: inline-block;
-	
 }
 
 .overlap-img{
-	position: relative;
-	z-index: -1;
+	float: left;
+	position: absolute;
+	max-width: 60%;
+	height: auto;
 }
 
 .backdrop-img{
-	position: absolute;
-	right: 0%;
-	top:160%;
+	float:right;
+	max-width: 60%;
+	height: auto;
+	margin-top: 10%;
+	z-index: -1;
 }
 
-.backdrop text{
-	position: absolute;
-	top:180%;
-}
+
 
 .backdrop-text {
-	position: absolute;
-	top:195%;
-	right:50%;
+	position: relative;
+	left:20%;
+	top:380px;
 	color: #df5826;
 	max-width: 400px;
-	padding: 40px 0px 15px 15px;
+	height: auto;
+	padding: 40px 40px 15px 15px;
 	border: 2px solid #df5826;
 	z-index: -999;
 }
@@ -176,22 +177,20 @@ i{
 	font-size:22px;
 }
 
-.text-column{
-	max-width: 400px;
-	color: black;
-}
 
 .text-column {
+	max-width: 400px;
+	height: auto;
+	color: black;
 	position: relative;
 	right:-60%;
-	bottom: 200px;
+	bottom: 300px;
 	margin-bottom: -160px;
-
 	padding: 10px 10px;
 }
 
 hr{
-	margin-bottom: 30px;
+	margin-bottom: 80px;
 	width: 6%;
 	margin-left: 47%;
 	border:2px solid #df5826;
@@ -202,6 +201,8 @@ hr{
 	position: relative;
 	top:250px;
 	left:5%;
+	width: 50%;
+	height:auto;
 	display: inline-block;
 }
 
@@ -209,15 +210,53 @@ hr{
 /*slideshow*/
 
 .section-slideshow{
-	height: 600px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
+	margin-top: 140px;
+}
+
+.corousel{
+	overflow: hidden;
+	max-width:100%;
+}
+
+.corousel-pic-1{
+	margin: 0 0 0 0;
+	padding: 0 0;
+}
+
+.corousel-pic-1 img{
+	float: left;
+	max-width: 33%;
+	height: auto;
+}
+
+.corousel-pic-3{
+	margin: 0 0 0 0;
+	padding: 0 0;
+}
+
+.corousel-pic-3 img{
+	float: right;
+	max-width: 33%;
+	height: auto;
+}
+
+.corousel-pic-2{
+	position: absolute;
+	bottom: 30px;
+	left:25%;
+	top:370%;
+}
+
+
+.section-slideshow h3{
+	margin-top: 80px;
 }
 
 .section-slideshow h3,h4 {
+	
 	color: black;
 	font-weight: 400;
-	position: relative;
-	top:460px;
 	text-align: center;
 }
 .section-slideshow h4{
@@ -229,15 +268,21 @@ hr{
 	color: #df5826;
 }
 
+
 .ion-ios-arrow-thin-left
 {
+	float: left;
 	position: relative;
-	top:460px;
 	left:8%;
 }
 
 .ion-ios-arrow-thin-right{
+	float: right;
 	position: relative;
-	top:460px;
-	right:-88%;
+	right:8%;
+}
+
+.section-slideshow hr{
+	margin-top: 30px;
+	
 }
