@@ -19,6 +19,11 @@ $("#comment-btn").click(function (e) {
 	var description;
 	var icon;
 	var timestamp;
+	
+	var date = new Date();
+	date = date.toString();
+	date = date.slice(4, 24);
+	timestamp=date;
 
 	if (name.trim() == '' || comment.trim() == '') {
 		$('.err').show();
@@ -46,6 +51,7 @@ $("#comment-btn").click(function (e) {
 						wcity: wcity,
 						temp: temp,
 						description: description,
+						timestamp: timestamp,
 						icon: "http://openweathermap.org/img/w/" + icon + ".png"
 					};
 
@@ -69,13 +75,15 @@ $("#comment-btn").click(function (e) {
 				} else {
 					alert("enter the correct city name");
 				}
+				location.reload();
 			});
 
 		} else {
 			var obj = {
 				name: name,
 				weather: false,
-				comment: comment
+				comment: comment,
+				timestamp: timestamp
 			};
 
 			if (refobjarr.length > 0) {
@@ -90,6 +98,8 @@ $("#comment-btn").click(function (e) {
 				localStorage.setItem("comments", JSON.stringify(refobjarr));
 				console.log(JSON.parse(localStorage.getItem("comments")));
 			}
+			
+			location.reload();
 		}
 
 
@@ -113,13 +123,13 @@ if (refobjarr.length > 0) {
 	});
 
 	function addComment(el) {
-		var rowElement = $('<div class="comment-box"><h4>' + el.name + '</h4><p>' + el.comment + '</p></div>');
+		var rowElement = $('<div class="comment-box"><img src="https://randomuser.me/api/portraits/men/86.jpg"><h4>' + el.name + '</h4><div class="comment-timestamp"><i class="ion-ios-clock-outline"> '+el.timestamp+'</i></div><div style="clear:both;"></div><p><i class="ion-quote"></i>' + el.comment + '</p></div>');
 		$('.comment-section').append(rowElement);
 	}
 
 	function addWeather(el) {
 		console.log(el);
-		var rowElement = $('<div class="weather-box"><h4>' + el.name + '</h4><p>' + el.wcity+' '+el.temp+ '</p><img src="'+el.icon+'"><p>'+el.description+'</p></div>');
+		var rowElement = $('<div class="weather-box"><img src="https://randomuser.me/api/portraits/men/86.jpg"><h4>' + el.name + '</h4><div class="comment-timestamp"><i class="ion-ios-clock-outline"> '+el.timestamp+'</i></div><div style="clear:both;"></div><h2><i class="ion-ios-location-outline"></i>'+el.wcity+'</h2><h2 class="comment-temp"><i class="ion-thermometer"></i>'+el.temp+'°C</h2></div>');
 		$('.comment-section').append(rowElement);
 	}
 
