@@ -253,7 +253,7 @@ hr{
 	margin-top: 80px;
 }
 
-.section-slideshow h3,h4 {
+.section-slideshow h3, .section-slideshow h4 {
 	
 	color: black;
 	font-weight: 400;
@@ -334,6 +334,41 @@ button{
 	bottom:30px;
 }
 
-input:invalid {
-  border: 2px dashed red;
+
+.comment-box{
+	padding: 10px;
+}
+
+.comment-box h4{
+	font-weight: 400;
+}
+
+.no-comments{
+	padding: 10px;
+	margin-bottom: 50px;
+}
+
+.no-comments h2{
+	text-align: center;
+}
+
+.weather-box{
+	padding: 10px;
+	background-color: rgba(223, 88, 38, 0.28);
+	border-radius: 60px;
+}
+
+.weather-box h4{
+	font-weight: 400;
+	padding: 10px 10px 10px 0;
+}
+
+.weather-box p{
+	display: inline-block;
+	padding: 10px;
+}
+
+.weather-box img{
+	float: right;
+	font-size: 30px;
 }
