@@ -197,38 +197,84 @@
 		width: 300px;
 		top: -40px;
 	}
-	.corousel i{
+	.corousel i {
 		display: none;
 	}
 	.section-slideshow h3 {
 		margin-top: 60px;
 	}
+
+	.comments-header {
+		height: 60px;
+	}
+	.comments-header h1 {
+		padding: 15px;
+		font-size: 25px;
+	}
+
+	#comment {
+		width: 100%;
+	}
+
+	.comment-box {
+		padding: 10px;
+	}
+	.comment-box img {
+		height: 40px;
+	}
+	
+	.ion-quote {
+		font-size: 30px;
+		color: #df5826;
+		position: relative;
+		top: 0px;
+	}
+	
+	.no-comments h2 {
+		font-size: 20px;
+	}
+	
+	.weather-box {
+		padding: 10px;
+	}
+	.weather-box img{
+		height: 40px;
+	}
+	
+	
+	.weather-box h2 {
+		display: inline-block;
+		font-weight: 500;
+		color: #df5826;
+	}
+
+	.comment-timestamp {
+		float: left;
+		width: 80%;
+		margin-left: 5px;
+	}
+	.comment-temp {
+		float: right;
+	}
 }
 
 @media only screen and (max-width:425px) {
 	.text-img {
-
 		top: 740px;
-
 	}
 	.last-para {
 		margin-top: 250px;
 	}
-	
 }
 
 @media only screen and (max-width: 375px) {
-
-		.text-img {
-
+	.text-img {
 		top: 770px;
-
 	}
 	.last-para {
 		margin-top: 200px;
 	}
-	
-		.corousel-pic-1 img {
+	.corousel-pic-1 img {
 		width: 150px;
 	}
 	.corousel-pic-3 img {
@@ -238,13 +284,11 @@
 		width: 250px;
 		top: -40px;
 	}
-
 }
 
 @media only screen and (max-width: 335px) {
-		.text-img {
+	.text-img {
 		top: 840px;
-
 	}
 	.last-para {
 		margin-top: 200px;

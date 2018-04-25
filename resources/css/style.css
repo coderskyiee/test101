@@ -28,7 +28,7 @@ header{
 	
     background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(38, 38, 38))),url('http://via.placeholder.com/1920x1200');
 	
-    background-image:linear-gradient(rgba(0, 0, 0, 0), rgb(38, 38, 38)),url('http://via.placeholder.com/1920x1200');
+    background-image:linear-gradient(rgba(0, 0, 0, 0), rgb(38, 38, 38)),url('https://via.placeholder.com/1920x1200');
     background-size: cover;
     background-position: center;
     height: 100vh;
