@@ -21,7 +21,7 @@ $(window).load(function () {
     if (viewportWidth < 768) {
 		$('.sidebar-ins').hide();
 		var rowElement = '<ul><li><i class="ion-chevron-left"></i></li><li><i class="ion-chatbox-working"></i></li><li>Aa</li><li><i class="ion-ios-paperplane-outline"></i></li></ul>';
-		$('.sidebar').append(rowElement);
+		$('.sidebar-mob').append(rowElement);
     }
 });
 

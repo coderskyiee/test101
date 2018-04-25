@@ -120,18 +120,18 @@ i{
 
 /*mobile sidebar*/
 
-.sidebar ul{
+.sidebar-mob ul{
 	align-content: center;
 	text-align: center;
 }
 
-.sidebar ul li{
+.sidebar-mob ul li{
 	display: inline-block;
 	margin-left: 20%;
 	font-size: 40px;
 }
 
-.sidebar ul li:first-child{
+.sidebar-mob ul li:first-child{
 	margin-left: 0;
 }
 
@@ -190,7 +190,7 @@ i{
 .backdrop-text {
 	position: relative;
 	margin-left: 20%;
-	top:-130px;
+	top:-140px;
 	color: #df5826;
 	max-width: 400px;
 	height: auto;
