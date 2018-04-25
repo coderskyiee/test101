@@ -90,6 +90,19 @@
 /* Small phones to smal;l tablets: 481px to 767px */
 
 @media only screen and (max-width: 768px) {
+	
+	.title-text {
+		top: 80%;
+		width: 90%;
+		left:5%;
+	transform:translateX(0%)
+	translateY(0%);
+	}
+	.title-icons {
+		display: none;
+	}
+	
+	
 	.text-column {
 		max-width: 90%;
 		position: relative;
@@ -126,6 +139,8 @@
 }
 
 @media only screen and (max-width:600px) {
+	
+
 	.text-img {
 		position: relative;
 		top: 530px;
@@ -146,13 +161,14 @@
 		max-height: 50vh;
 	}
 	.title-text {
-		font-size: 10px;
-		position: absolute;
-		top: 45%;
-		width: 80%;
-		left: 45%;
-		display: inline-block;
+	top: 35%;
 	}
+	
+	.title-text h1{
+		font-size: 30px;
+		font-weight: 500;
+	}
+	
 	.overlap-img {
 		float: left;
 		position: absolute;
@@ -167,7 +183,7 @@
 		margin-top: -15%;
 	}
 	.backdrop-text {
-		top: 70px;
+		top: 90px;
 		padding: 10px 10px;
 	}
 	.text-column {
@@ -259,6 +275,20 @@
 }
 
 @media only screen and (max-width:425px) {
+	
+	.title-text {
+	top: 40%;
+	}
+	
+	.title-text h1{
+		font-size: 25px;
+	}
+	
+	.sidebar ul li{
+	margin-left: 15%;
+	font-size: 40px;
+}
+	
 	.text-img {
 		top: 740px;
 	}
@@ -272,7 +302,7 @@
 		top: 770px;
 	}
 	.last-para {
-		margin-top: 200px;
+		margin-top: 230px;
 	}
 	.corousel-pic-1 img {
 		width: 150px;
@@ -286,7 +316,13 @@
 	}
 }
 
-@media only screen and (max-width: 335px) {
+@media only screen and (max-width: 330px) {
+	
+		.sidebar ul li{
+	margin-left: 15%;
+	font-size: 30px;
+}
+	
 	.text-img {
 		top: 840px;
 	}

@@ -43,6 +43,7 @@ header{
 	float: left;
 	list-style: none;
 	display: inline-block;
+	margin-top: 10px;
 }
 
 .left-nav-bar li{
@@ -52,7 +53,8 @@ header{
 
 .ion-ios-analytics{
 	position: absolute;
-        top: 25px;
+        top: 40px;
+		font-size: 30px;
         left: 50%;
         margin-right: -50%;
         -webkit-transform: translate(-50%, -50%);
@@ -78,9 +80,10 @@ display: inline-block;
 }
 
 .user-img{
-	height: 30px;
+	height: 40px;
 	border-radius: 50%;
-
+	position: relative;
+	top:10px;
 }
 
 i{
@@ -115,6 +118,22 @@ i{
 	border-radius: 50%;
 }
 
+/*mobile sidebar*/
+
+.sidebar ul{
+	align-content: center;
+	text-align: center;
+}
+
+.sidebar ul li{
+	display: inline-block;
+	margin-left: 20%;
+	font-size: 40px;
+}
+
+.sidebar ul li:first-child{
+	margin-left: 0;
+}
 
 /*section news text*/
 
