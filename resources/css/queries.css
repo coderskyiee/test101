@@ -340,7 +340,7 @@
 }
 
 
-@media only screen and (max-height:600px)
+@media only screen and (max-height:360px)
 {
 	.title-text {
 	top: 70%;
