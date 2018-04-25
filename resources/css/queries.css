@@ -158,7 +158,7 @@
 		display: none;
 	}
 	header {
-		max-height: 50vh;
+		max-height: 60vh;
 	}
 	.title-text {
 	top: 35%;
@@ -280,13 +280,18 @@
 	top: 40%;
 	}
 	
-	.title-text h1{
-		font-size: 25px;
-	}
-	
-	.sidebar ul li{
-	margin-left: 15%;
-	font-size: 40px;
+	.mob ul{
+	align-content: center;
+	text-align: center;
+}
+
+.mob ul li{
+	display: inline-block;
+	margin-left: 20%;
+	font-size: 25px;
+}
+	.sidebar{
+	padding: 5px;
 }
 	
 	.text-img {
@@ -302,7 +307,7 @@
 		top: 770px;
 	}
 	
-		.title-text {
+	.title-text {
 	top: 33%;
 	}
 	.last-para {
@@ -326,10 +331,6 @@
 	top: 30%;
 	}
 	
-		.sidebar ul li{
-	margin-left: 15%;
-	font-size: 30px;
-}
 	
 	.text-img {
 		top: 840px;
@@ -340,7 +341,8 @@
 }
 
 
-@media only screen and (max-height:360px)
+
+@media only screen and (max-height:320px)
 {
 	.title-text {
 	top: 70%;

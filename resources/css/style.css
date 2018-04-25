@@ -120,18 +120,18 @@ i{
 
 /*mobile sidebar*/
 
-.sidebar-mob ul{
+.mob ul{
 	align-content: center;
 	text-align: center;
 }
 
-.sidebar-mob ul li{
+.mob ul li{
 	display: inline-block;
 	margin-left: 20%;
-	font-size: 40px;
+	font-size: 30px;
 }
 
-.sidebar-mob ul li:first-child{
+.mob ul li:first-child{
 	margin-left: 0;
 }
 

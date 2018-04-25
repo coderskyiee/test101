@@ -9,23 +9,23 @@ $('.err').hide();
 //$('.re-size').hide();
 //
 $(window).load(function () {
-    var viewportWidth = $(window).width();
-    if (viewportWidth < 468) {
+	var viewportWidth = $(window).width();
+	if (viewportWidth < 468) {
 		$('i').removeClass('ion-ios-arrow-thin-left');
 		$('i').removeClass('ion-ios-arrow-thin-right');
-    }
+	}
 });
 
 $(window).load(function () {
-    var viewportWidth = $(window).width();
-    if (viewportWidth < 768) {
+	var viewportWidth = $(window).width();
+	if (viewportWidth < 768) {
 		$('.sidebar-ins').hide();
 		var rowElement = '<ul><li><i class="ion-chevron-left"></i></li><li><i class="ion-chatbox-working"></i></li><li>Aa</li><li><i class="ion-ios-paperplane-outline"></i></li></ul>';
-		$('.sidebar-mob').append(rowElement);
-    }
+		$('.mob').append(rowElement);
+	}
 });
 
-		
+
 
 $("#comment-btn").click(function (e) {
 	e.preventDefault();
@@ -39,11 +39,11 @@ $("#comment-btn").click(function (e) {
 	var description;
 	var icon;
 	var timestamp;
-	
+
 	var date = new Date();
 	date = date.toString();
 	date = date.slice(4, 24);
-	timestamp=date;
+	timestamp = date;
 
 	if (name.trim() == '' || comment.trim() == '') {
 		$('.err').show();
@@ -58,8 +58,16 @@ $("#comment-btn").click(function (e) {
 			var wcity = comment.slice(9, l);
 			console.log(wcity);
 			var url = 'https://api.openweathermap.org/data/2.5/forecast?units=metric&APPID=105a01a184626ca822bc272f00e1f386&q=' + wcity;
-			$.get(url, function (data, status) {
-				if (status) {
+			var data;
+			$.ajax({
+				url: url,
+				data: data,
+				error: function(){
+				alert("enter valid city name");	
+				location.reload();
+				},
+				success: function(data){
+					console.log(status);
 					temp = data.list[0].main.temp;
 					description = data.list[0].weather[0].description;
 					icon = data.list[0].weather[0].icon;
@@ -90,12 +98,9 @@ $("#comment-btn").click(function (e) {
 						localStorage.setItem("comments", JSON.stringify(refobjarr));
 						console.log(JSON.parse(localStorage.getItem("comments")));
 					}
+					location.reload();
 
-
-				} else {
-					alert("enter the correct city name");
-				}
-				location.reload();
+			}
 			});
 
 		} else {
@@ -118,7 +123,7 @@ $("#comment-btn").click(function (e) {
 				localStorage.setItem("comments", JSON.stringify(refobjarr));
 				console.log(JSON.parse(localStorage.getItem("comments")));
 			}
-			
+
 			location.reload();
 		}
 
@@ -143,13 +148,13 @@ if (refobjarr.length > 0) {
 	});
 
 	function addComment(el) {
-		var rowElement = $('<div class="comment-box"><img src="https://randomuser.me/api/portraits/men/86.jpg"><h4>' + el.name + '</h4><div class="comment-timestamp"><i class="ion-ios-clock-outline"> '+el.timestamp+'</i></div><div style="clear:both;"></div><p><i class="ion-quote"></i>' + el.comment + '</p></div>');
+		var rowElement = $('<div class="comment-box"><img src="https://randomuser.me/api/portraits/men/86.jpg"><h4>' + el.name + '</h4><div class="comment-timestamp"><i class="ion-ios-clock-outline"> ' + el.timestamp + '</i></div><div style="clear:both;"></div><p><i class="ion-quote"></i>' + el.comment + '</p></div>');
 		$('.comment-section').append(rowElement);
 	}
 
 	function addWeather(el) {
 		console.log(el);
-		var rowElement = $('<div class="weather-box"><img src="https://randomuser.me/api/portraits/men/86.jpg"><h4>' + el.name + '</h4><div class="comment-timestamp"><i class="ion-ios-clock-outline"> '+el.timestamp+'</i></div><div style="clear:both;"></div><h2><i class="ion-ios-location-outline"></i>'+el.wcity+'</h2><h2 class="comment-temp"><i class="ion-thermometer"></i>'+el.temp+'°C</h2></div>');
+		var rowElement = $('<div class="weather-box"><img src="https://randomuser.me/api/portraits/men/86.jpg"><h4>' + el.name + '</h4><div class="comment-timestamp"><i class="ion-ios-clock-outline"> ' + el.timestamp + '</i></div><div style="clear:both;"></div><h2><i class="ion-ios-location-outline"></i>' + el.wcity + '</h2><h2 class="comment-temp"><i class="ion-thermometer"></i>' + el.temp + '°C</h2></div>');
 		$('.comment-section').append(rowElement);
 	}
 
