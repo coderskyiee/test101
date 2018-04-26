@@ -94,7 +94,7 @@
 		display: none;
 	}
 	.mob {
-		display: contents;
+		display:contents;
 	}
 	.title-text {
 		top: 70%;
@@ -327,6 +327,9 @@
 }
 
 @media only screen and (max-height:320px) {
+		
+
+	
 	.title-text {
 		top: 70%;
 	}
