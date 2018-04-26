@@ -90,19 +90,22 @@
 /* Small phones to smal;l tablets: 481px to 767px */
 
 @media only screen and (max-width: 768px) {
-	
+	.sidebar-ins {
+		display: none;
+	}
+	.mob {
+		display: contents;
+	}
 	.title-text {
-		top: 80%;
+		top: 70%;
 		width: 90%;
-		left:5%;
-	transform:translateX(0%)
-	translateY(0%);
+		left: 5%;
+		-webkit-transform: translateX(0%) translateY(0%);
+		transform: translateX(0%) translateY(0%);
 	}
 	.title-icons {
 		display: none;
 	}
-	
-	
 	.text-column {
 		max-width: 90%;
 		position: relative;
@@ -139,8 +142,6 @@
 }
 
 @media only screen and (max-width:600px) {
-	
-
 	.text-img {
 		position: relative;
 		top: 530px;
@@ -154,6 +155,9 @@
 /* Small phones: 0 to 480px */
 
 @media only screen and (max-width: 480px) {
+	.arrows {
+		display: none;
+	}
 	.title-icons {
 		display: none;
 	}
@@ -161,14 +165,12 @@
 		max-height: 60vh;
 	}
 	.title-text {
-	top: 35%;
+		top: 35%;
 	}
-	
-	.title-text h1{
+	.title-text h1 {
 		font-size: 30px;
 		font-weight: 500;
 	}
-	
 	.overlap-img {
 		float: left;
 		position: absolute;
@@ -219,7 +221,6 @@
 	.section-slideshow h3 {
 		margin-top: 60px;
 	}
-
 	.comments-header {
 		height: 60px;
 	}
@@ -227,43 +228,35 @@
 		padding: 15px;
 		font-size: 25px;
 	}
-
 	#comment {
 		width: 100%;
 	}
-
 	.comment-box {
 		padding: 10px;
 	}
 	.comment-box img {
 		height: 40px;
 	}
-	
 	.ion-quote {
 		font-size: 30px;
 		color: #df5826;
 		position: relative;
 		top: 0px;
 	}
-	
 	.no-comments h2 {
 		font-size: 20px;
 	}
-	
 	.weather-box {
 		padding: 10px;
 	}
-	.weather-box img{
+	.weather-box img {
 		height: 40px;
 	}
-	
-	
 	.weather-box h2 {
 		display: inline-block;
 		font-weight: 500;
 		color: #df5826;
 	}
-
 	.comment-timestamp {
 		float: left;
 		width: 80%;
@@ -275,25 +268,22 @@
 }
 
 @media only screen and (max-width:425px) {
-	
 	.title-text {
-	top: 40%;
+		top: 40%;
 	}
-	
-	.mob ul{
-	align-content: center;
-	text-align: center;
-}
-
-.mob ul li{
-	display: inline-block;
-	margin-left: 20%;
-	font-size: 25px;
-}
-	.sidebar{
-	padding: 5px;
-}
-	
+	.mob ul {
+		-ms-flex-line-pack: center;
+		align-content: center;
+		text-align: center;
+	}
+	.mob ul li {
+		display: inline-block;
+		margin-left: 20%;
+		font-size: 25px;
+	}
+	.sidebar {
+		padding: 5px;
+	}
 	.text-img {
 		top: 740px;
 	}
@@ -306,9 +296,8 @@
 	.text-img {
 		top: 770px;
 	}
-	
 	.title-text {
-	top: 33%;
+		top: 33%;
 	}
 	.last-para {
 		margin-top: 230px;
@@ -326,12 +315,9 @@
 }
 
 @media only screen and (max-width: 330px) {
-	
 	.title-text {
-	top: 30%;
+		top: 30%;
 	}
-	
-	
 	.text-img {
 		top: 840px;
 	}
@@ -340,16 +326,11 @@
 	}
 }
 
-
-
-@media only screen and (max-height:320px)
-{
+@media only screen and (max-height:320px) {
 	.title-text {
-	top: 70%;
+		top: 70%;
 	}
-	
-	.title-text h1{
+	.title-text h1 {
 		font-size: 30px;
 	}
-	
 }

@@ -1,3 +1,11 @@
+//hiding error
+
+$('.err').hide();
+
+
+// shift+enter for new line.
+//enter to post 
+
 $("#comment").keydown(function (e) {
 	if (e.keyCode == 13 && !e.shiftKey) {
 		e.preventDefault();
@@ -5,27 +13,7 @@ $("#comment").keydown(function (e) {
 	}
 });
 
-$('.err').hide();
-//$('.re-size').hide();
-//
-$(window).load(function () {
-	var viewportWidth = $(window).width();
-	if (viewportWidth < 468) {
-		$('i').removeClass('ion-ios-arrow-thin-left');
-		$('i').removeClass('ion-ios-arrow-thin-right');
-	}
-});
-
-$(window).load(function () {
-	var viewportWidth = $(window).width();
-	if (viewportWidth < 768) {
-		$('.sidebar-ins').hide();
-		var rowElement = '<ul><li><i class="ion-chevron-left"></i></li><li><i class="ion-chatbox-working"></i></li><li>Aa</li><li><i class="ion-ios-paperplane-outline"></i></li></ul>';
-		$('.mob').append(rowElement);
-	}
-});
-
-
+//comment button 
 
 $("#comment-btn").click(function (e) {
 	e.preventDefault();
@@ -53,7 +41,7 @@ $("#comment-btn").click(function (e) {
 		var refobjarr = JSON.parse(localStorage.getItem("comments")) || [];
 
 		console.log(wcheck);
-		if (wcheck == '+weather') {
+		if (wcheck.trim() == '+weather') {
 			var l = comment.length;
 			var wcity = comment.slice(9, l);
 			console.log(wcity);
@@ -62,11 +50,11 @@ $("#comment-btn").click(function (e) {
 			$.ajax({
 				url: url,
 				data: data,
-				error: function(){
-				alert("enter valid city name");	
-				location.reload();
+				error: function () {
+					alert("enter valid city name");
+					location.reload();
 				},
-				success: function(data){
+				success: function (data) {
 					console.log(status);
 					temp = data.list[0].main.temp;
 					description = data.list[0].weather[0].description;
@@ -100,7 +88,7 @@ $("#comment-btn").click(function (e) {
 					}
 					location.reload();
 
-			}
+				}
 			});
 
 		} else {
@@ -126,6 +114,10 @@ $("#comment-btn").click(function (e) {
 
 			location.reload();
 		}
+
+
+		$('#name').val('');
+		$('#comment').val('');
 
 
 	}
